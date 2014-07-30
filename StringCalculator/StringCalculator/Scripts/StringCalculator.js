@@ -1,11 +1,13 @@
 ﻿var stringCalculator = function () {
-    this._attribute = "hello";
 };
 stringCalculator.prototype = {
-    add: function (numbers) {
-        if (numbers==="")
+    add: function (input) {
+        if (input === "") {
             return 0;
-        return Number(numbers);
+        }
+        var calc = input.replace(',', '+');
+        return eval(calc);
+
     },
 
 };
