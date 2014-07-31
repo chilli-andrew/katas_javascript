@@ -1,39 +1,72 @@
 ﻿/// <reference path="../../stringcalculator/scripts/stringcalculator.js" />
-module("String Calculator Tests:");
-var createStringCalculator = function () {
-    return new stringCalculator();
-};
+module("String Calculator tests:");
 
- //note to self - qunit has actual, expected, message 
- //this is different to nunit which is expected, actual, message
+function createStringCalculator() {
+    return new stringCalculator();
+}
+
 test("add given empty string should return 0", function () {
-    var numbers = "";
+    // Arrange
+    var input = "";
     var expected = 0;
     var calc = createStringCalculator();
-    var result = calc.add(numbers);
+    // Act
+    var result = calc.add(input);
+    // Assert
     equal(result, expected);
 });
 
-test("add given single number string of 1 should return 1", function() {
-    var numbers = "1";
+test("add given single number string of 1 should return 1", function () {
+    // Arrange
+    var input = "1";
     var expected = 1;
     var calc = createStringCalculator();
-    var result = calc.add(numbers);
+    // Act
+    var result = calc.add(input);
+    // Assert
     equal(result, expected);
 });
 
-test("add given single number string of 2 should return 2", function() {
-    var numbers = "2";
+test("add given single number string of 2 should return 2", function () {
+    // Arrange
+    var input = "2";
     var expected = 2;
     var calc = createStringCalculator();
-    var result = calc.add(numbers);
+    // Act
+    var result = calc.add(input);
+    // Assert
     equal(result, expected);
 });
 
-test("add given two numbers separated by a comma should return sum", function() {
-    var numbers = "1,2";
+test("add given two number string of '1,2' should return sum", function () {
+    // Arrange
+    var input = "1,2";
     var expected = 3;
     var calc = createStringCalculator();
-    var result = calc.add(numbers);
+    // Act
+    var result = calc.add(input);
+    // Assert
+    equal(result, expected);
+});
+
+test("add given two number string of '5,7' should return sum", function () {
+    // Arrange
+    var input = "5,7";
+    var expected = 12;
+    var calc = createStringCalculator();
+    // Act
+    var result = calc.add(input);
+    // Assert
+    equal(result, expected);
+});
+
+test("add given three number string of '5,5,5' should return sum", function () {
+    // Arrange
+    var input = "5,5,5";
+    var expected = 15;
+    var calc = createStringCalculator();
+    // Act
+    var result = calc.add(input);
+    // Assert
     equal(result, expected);
 });

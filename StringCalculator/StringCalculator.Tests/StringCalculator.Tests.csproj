@@ -102,6 +102,7 @@
   <ItemGroup>
     <Content Include="App.config" />
     <Content Include="Content\qunit.css" />
+    <Content Include="Scripts\arrayTests.js" />
     <Content Include="Scripts\qunit.js" />
     <Content Include="Scripts\StringCalculatorTests.js" />
   </ItemGroup>
