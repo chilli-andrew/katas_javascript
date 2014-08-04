@@ -20,7 +20,7 @@ test("split returns array", function () {
     equal(arr[2], "3");
 });
 
-test("array.every when it should be false", function () {
+test("array.every when at least one element is less than 0 should return false", function () {
     var arr = [1, 2, -1, 3];
 
     var result = arr.every(function (el) {
@@ -30,8 +30,20 @@ test("array.every when it should be false", function () {
     ok(result===false);
 });
 
-test("array.every when it should be true", function () {
-    var arr = [1, 2, 3];
+test("array.some when at least one element is lesss than 0 should return true", function () {
+
+    var arr = [0, 1, 2, -1, 3];
+
+    var result = arr.some(function (el) {
+        return el < 0;        
+    });
+
+    ok(result);
+});
+
+
+test("array.every when no elements are less than 0 should return true", function () {
+    var arr = [0, 1, 2, 3];
 
     var result = arr.every(function (el) {
         return el >= 0;
@@ -48,3 +60,4 @@ test("array.reduce to sum elements of array", function () {
 
     equal(result, 10);
 });
+
