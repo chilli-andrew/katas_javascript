@@ -1,0 +1,18 @@
+{
+    "name": "stringCalculator",
+    "description": "stringCalculator",
+    "version": "0.0.1",
+    "private": true,
+    "devDependencies": {
+        "karma": "",
+        "karma-cli": "",
+        "karma-chrome-launcher": "",
+        "karma-ie-launcher": "",
+        "karma-phantomjs-launcher": "",
+        "karma-jasmine": "",
+        "karma-xml-reporter": ""
+    },
+    "engines": {
+        "node": ">=0.12.0"
+    }
+}
