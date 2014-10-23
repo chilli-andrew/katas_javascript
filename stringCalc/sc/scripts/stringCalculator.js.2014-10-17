@@ -1,0 +1,30 @@
+﻿function createStringCalculator() {
+    'use strict';
+
+    function convertToNum(input) {
+        return parseInt(input, 10);
+    }
+
+    function calculateSum(input, delimiter) {
+        return input.split(delimiter)
+                    .map(function (s) { return convertToNum(s); })
+                    .reduce(function (n, total) { return total + n; });
+    }
+
+
+    var add = function (input) {
+        if (input) {
+            if (input.indexOf(',') < 0) {
+                return calculateSum(input, '\n');
+            }
+
+            return calculateSum(input, ',');
+        }
+        return 0;
+    };
+
+    return {
+        add: add
+    };
+}
+
