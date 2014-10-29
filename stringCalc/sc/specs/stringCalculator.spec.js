@@ -1,89 +1,102 @@
-﻿/*global describe, it, expect, createStringCalculator, beforeEach */
-describe('string calculator', function () {
-    'use strict';
-
+﻿/* global describe, it, expect, createStringCalculator */
+describe('stringCalculator', function () {
     describe('add', function() {
-        it('should return 0 given input is empty string', function () {
-            var result, expected, calc;
-            calc = createStringCalculator();
-            expected = 0;
-            result = calc.add('');
+        it('should return 0 given empty string', function() {
+            // arrange
+            var input = '';
+            var expected = 0;
+
+            var calc = createStringCalculator();
+            // act
+            var result = calc.add(input);
+            // assert
             expect(result).toEqual(expected);
         });
 
-        it('should return 0 given input is undefined', function () {
-            var result, expected, calc;
-            calc = createStringCalculator();
-            expected = 0;
-            result = calc.add(undefined);
+        it('should return single digit number given single digit string', function() {
+            // arrange
+            var input = '1';
+            var expected = 1;
+
+            var calc = createStringCalculator();
+            // act
+            var result = calc.add(input);
+            // assert
             expect(result).toEqual(expected);
         });
 
-        it('should return single digit number given single digit input', function () {
-            var result, expected, calc;
-            calc = createStringCalculator();
-            expected = 1;
-            result = calc.add('1');
+        it('should return multiple digit number given multiple digit string', function() {
+            // arrange
+            var input = '12';
+            var expected = 12;
+
+            var calc = createStringCalculator();
+            // act
+            var result = calc.add(input);
+            // assert
             expect(result).toEqual(expected);
         });
 
-        it('should return double digit number given double digit input', function () {
-            var result, expected, calc;
-            calc = createStringCalculator();
-            expected = 13;
-            result = calc.add('13');
+        it('should return sum given two comma separated digits', function() {
+            // arrange
+            var input = '1,2';
+            var expected = 3;
+
+            var calc = createStringCalculator();
+            // act
+            var result = calc.add(input);
+            // assert
             expect(result).toEqual(expected);
         });
 
-        it('should return sum given input as two comma separated digits', function () {
-            var result, expected, calc;
-            calc = createStringCalculator();
-            expected = 3;
-            result = calc.add('1,2');
+        it('should return sum given many comma separated digits', function() {
+            // arrange
+            var input = '1,2,3';
+            var expected = 6;
+
+            var calc = createStringCalculator();
+            // act
+            var result = calc.add(input);
+            // assert
             expect(result).toEqual(expected);
         });
 
-        it('should return sum given input as many comma separated digits', function () {
-            var result, expected, calc;
-            calc = createStringCalculator();
-            expected = 6;
-            result = calc.add('1,2,3');
+        it('should return sum given new line separated digits', function() {
+            // arrange
+            var input = '3\n5';
+            var expected = 8;
+
+            var calc = createStringCalculator();
+            // act
+            var result = calc.add(input);
+            // assert
             expect(result).toEqual(expected);
         });
 
-        it('should return sum given input as two newline separated digits', function () {
-            var result, expected, calc;
-            calc = createStringCalculator();
-            expected = 7;
-            result = calc.add('3\n4');
+        it('should return sum given new line separated digits', function() {
+            // arrange
+            var input = '3\n5';
+            var expected = 8;
+
+            var calc = createStringCalculator();
+            // act
+            var result = calc.add(input);
+            // assert
             expect(result).toEqual(expected);
         });
 
-        it('should return sum given input as comma and newline separated digits', function () {
-            var result, expected, calc;
-            calc = createStringCalculator();
-            expected = 12;
-            result = calc.add('3\n4,5');
-            expect(result).toEqual(expected);
-        });
+        it('should throw with message given single negative in delimiter separated input', function() {
+            // arrange
+            var input = '3,-5\n7';
 
-        it('should return sum given input has custom separated digits', function () {
-            var result, expected, calc;
-            calc = createStringCalculator();
-            expected = 3;
-            result = calc.add('//;\n1;2');
-            expect(result).toEqual(expected);
-        });
-
-        it('should throw error given input with negative number', function () {
-            var calc;
-            calc = createStringCalculator();
+            var calc = createStringCalculator();
+            // act
             expect(function() {
-                calc.add('1,2,-3');
-            }).toThrow('Negatives not allowed : -3');
-
+                calc.add(input);
+            }).toThrow('negatives not allowed: -5');
+            // assert
         });
-
 
     });
+
 });

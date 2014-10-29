@@ -1,53 +1,43 @@
 <?xml version="1.0"?>
 <Tests>
   <Test>
-    <Name>string calculator,add should return 0 given input is empty string (PhantomJS 1.9.7 (Windows 8))</Name>
-    <DisplayName>string calculator,add should return 0 given input is empty string (PhantomJS 1.9.7 (Windows 8))</DisplayName>
+    <Name>stringCalculator,add should return 0 given empty string (PhantomJS 1.9.7 (Windows 8))</Name>
+    <DisplayName>stringCalculator,add should return 0 given empty string (PhantomJS 1.9.7 (Windows 8))</DisplayName>
     <Outcome>Passed</Outcome>
   </Test>
   <Test>
-    <Name>string calculator,add should return 0 given input is undefined (PhantomJS 1.9.7 (Windows 8))</Name>
-    <DisplayName>string calculator,add should return 0 given input is undefined (PhantomJS 1.9.7 (Windows 8))</DisplayName>
+    <Name>stringCalculator,add should return single digit number given single digit string (PhantomJS 1.9.7 (Windows 8))</Name>
+    <DisplayName>stringCalculator,add should return single digit number given single digit string (PhantomJS 1.9.7 (Windows 8))</DisplayName>
     <Outcome>Passed</Outcome>
   </Test>
   <Test>
-    <Name>string calculator,add should return single digit number given single digit input (PhantomJS 1.9.7 (Windows 8))</Name>
-    <DisplayName>string calculator,add should return single digit number given single digit input (PhantomJS 1.9.7 (Windows 8))</DisplayName>
+    <Name>stringCalculator,add should return multiple digit number given multiple digit string (PhantomJS 1.9.7 (Windows 8))</Name>
+    <DisplayName>stringCalculator,add should return multiple digit number given multiple digit string (PhantomJS 1.9.7 (Windows 8))</DisplayName>
     <Outcome>Passed</Outcome>
   </Test>
   <Test>
-    <Name>string calculator,add should return double digit number given double digit input (PhantomJS 1.9.7 (Windows 8))</Name>
-    <DisplayName>string calculator,add should return double digit number given double digit input (PhantomJS 1.9.7 (Windows 8))</DisplayName>
+    <Name>stringCalculator,add should return sum given two comma separated digits (PhantomJS 1.9.7 (Windows 8))</Name>
+    <DisplayName>stringCalculator,add should return sum given two comma separated digits (PhantomJS 1.9.7 (Windows 8))</DisplayName>
     <Outcome>Passed</Outcome>
   </Test>
   <Test>
-    <Name>string calculator,add should return sum given input as two comma separated digits (PhantomJS 1.9.7 (Windows 8))</Name>
-    <DisplayName>string calculator,add should return sum given input as two comma separated digits (PhantomJS 1.9.7 (Windows 8))</DisplayName>
+    <Name>stringCalculator,add should return sum given many comma separated digits (PhantomJS 1.9.7 (Windows 8))</Name>
+    <DisplayName>stringCalculator,add should return sum given many comma separated digits (PhantomJS 1.9.7 (Windows 8))</DisplayName>
     <Outcome>Passed</Outcome>
   </Test>
   <Test>
-    <Name>string calculator,add should return sum given input as many comma separated digits (PhantomJS 1.9.7 (Windows 8))</Name>
-    <DisplayName>string calculator,add should return sum given input as many comma separated digits (PhantomJS 1.9.7 (Windows 8))</DisplayName>
+    <Name>stringCalculator,add should return sum given new line separated digits (PhantomJS 1.9.7 (Windows 8))</Name>
+    <DisplayName>stringCalculator,add should return sum given new line separated digits (PhantomJS 1.9.7 (Windows 8))</DisplayName>
     <Outcome>Passed</Outcome>
   </Test>
   <Test>
-    <Name>string calculator,add should return sum given input as two newline separated digits (PhantomJS 1.9.7 (Windows 8))</Name>
-    <DisplayName>string calculator,add should return sum given input as two newline separated digits (PhantomJS 1.9.7 (Windows 8))</DisplayName>
+    <Name>stringCalculator,add should return sum given new line separated digits (PhantomJS 1.9.7 (Windows 8))</Name>
+    <DisplayName>stringCalculator,add should return sum given new line separated digits (PhantomJS 1.9.7 (Windows 8))</DisplayName>
     <Outcome>Passed</Outcome>
   </Test>
   <Test>
-    <Name>string calculator,add should return sum given input as comma and newline separated digits (PhantomJS 1.9.7 (Windows 8))</Name>
-    <DisplayName>string calculator,add should return sum given input as comma and newline separated digits (PhantomJS 1.9.7 (Windows 8))</DisplayName>
-    <Outcome>Passed</Outcome>
-  </Test>
-  <Test>
-    <Name>string calculator,add should return sum given input has custom separated digits (PhantomJS 1.9.7 (Windows 8))</Name>
-    <DisplayName>string calculator,add should return sum given input has custom separated digits (PhantomJS 1.9.7 (Windows 8))</DisplayName>
-    <Outcome>Passed</Outcome>
-  </Test>
-  <Test>
-    <Name>string calculator,add should throw error given input with negative number (PhantomJS 1.9.7 (Windows 8))</Name>
-    <DisplayName>string calculator,add should throw error given input with negative number (PhantomJS 1.9.7 (Windows 8))</DisplayName>
+    <Name>stringCalculator,add should throw with message given single negative in delimiter separated input (PhantomJS 1.9.7 (Windows 8))</Name>
+    <DisplayName>stringCalculator,add should throw with message given single negative in delimiter separated input (PhantomJS 1.9.7 (Windows 8))</DisplayName>
     <Outcome>Passed</Outcome>
   </Test>
 </Tests>
